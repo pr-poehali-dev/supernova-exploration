@@ -1,36 +1,36 @@
 import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone } from "lucide-react"
 
 const data = {
-  facebookLink: "https://facebook.com/digitalhub",
-  instaLink: "https://instagram.com/digitalhub",
-  twitterLink: "https://twitter.com/digitalhub",
-  githubLink: "https://github.com/digitalhub",
+  facebookLink: "https://facebook.com/technouspeсh",
+  instaLink: "https://instagram.com/technouspeсh",
+  twitterLink: "https://twitter.com/technouspeсh",
+  githubLink: "https://t.me/technouspeсh",
   services: {
-    web: "/web-razrabotka",
-    mobile: "/mobilnye-prilozheniya",
-    design: "/ui-ux-dizajn",
-    marketing: "/digital-marketing",
+    web: "#",
+    mobile: "#",
+    design: "#",
+    marketing: "#",
   },
   about: {
-    story: "/o-nas",
-    team: "/komanda",
-    portfolio: "/portfolio",
-    careers: "/vakansii",
+    story: "#",
+    team: "#",
+    portfolio: "#",
+    careers: "#",
   },
   help: {
-    faqs: "/faq",
-    support: "/podderzhka",
-    blog: "/blog",
+    faqs: "#",
+    support: "#",
+    blog: "#",
   },
   contact: {
-    email: "hello@digitalhub.ru",
-    phone: "+7 (495) 123-45-67",
+    email: "info@technouspeсh.ru",
+    phone: "+7 (800) 000-00-00",
     address: "Москва, Россия",
   },
   company: {
-    name: "ДиджиталХаб",
+    name: "Техноуспех",
     description:
-      "Создаём цифровые продукты, которые помогают бизнесу расти. Веб-разработка, мобильные приложения и дизайн под ключ.",
+      "Лидер дистрибьюции в России. Надёжные поставки, широкий ассортимент и долгосрочное партнёрство для вашего бизнеса.",
   },
 }
 
@@ -49,16 +49,16 @@ const aboutLinks = [
 ]
 
 const serviceLinks = [
-  { text: "Веб-разработка", href: data.services.web },
-  { text: "Мобильные приложения", href: data.services.mobile },
-  { text: "UI/UX Дизайн", href: data.services.design },
-  { text: "Digital-маркетинг", href: data.services.marketing },
+  { text: "Дистрибьюция", href: data.services.web },
+  { text: "Оптовые поставки", href: data.services.mobile },
+  { text: "Логистика", href: data.services.design },
+  { text: "Партнёрская программа", href: data.services.marketing },
 ]
 
 const helpfulLinks = [
-  { text: "FAQ", href: data.help.faqs },
+  { text: "Условия доставки", href: data.help.faqs },
   { text: "Поддержка", href: data.help.support },
-  { text: "Блог", href: data.help.blog, hasIndicator: true },
+  { text: "Новости", href: data.help.blog, hasIndicator: true },
 ]
 
 const contactInfo = [
@@ -81,7 +81,7 @@ export default function Footer() {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #0082c8;
           filter: blur(140px);
           height: 60%;
           width: 50%;
@@ -135,7 +135,7 @@ export default function Footer() {
         .brand-icon {
           width: 50px;
           height: 50px;
-          background: #d33682;
+          background: #0082c8;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -171,19 +171,19 @@ export default function Footer() {
         .social-link {
           width: 45px;
           height: 45px;
-          background: rgba(211, 54, 130, 0.1);
+          background: rgba(0, 130, 200, 0.1);
           border: 1px solid #333;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #d33682;
+          color: #0082c8;
           text-decoration: none;
           transition: all 0.3s ease;
         }
 
         .social-link:hover {
-          background: #d33682;
+          background: #0082c8;
           color: #002b36;
           transform: translateY(-2px);
         }
@@ -198,7 +198,7 @@ export default function Footer() {
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 16px;
-          color: #d33682;
+          color: #0082c8;
           text-transform: uppercase;
           margin: 0 0 25px;
           letter-spacing: 1px;
@@ -238,7 +238,7 @@ export default function Footer() {
         .contact-icon {
           width: 20px;
           height: 20px;
-          color: #d33682;
+          color: #0082c8;
           flex-shrink: 0;
         }
 
@@ -260,7 +260,7 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #0082c8;
           border-radius: 50%;
           animation: pulse 2s infinite;
         }
@@ -270,22 +270,22 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #0082c8;
           border-radius: 50%;
         }
 
         @keyframes pulse {
           0% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(211, 54, 130, 0.7);
+            box-shadow: 0 0 0 0 rgba(0, 130, 200, 0.7);
           }
           70% {
             transform: scale(1);
-            box-shadow: 0 0 0 10px rgba(211, 54, 130, 0);
+            box-shadow: 0 0 0 10px rgba(0, 130, 200, 0);
           }
           100% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(211, 54, 130, 0);
+            box-shadow: 0 0 0 0 rgba(0, 130, 200, 0);
           }
         }
 
@@ -306,7 +306,7 @@ export default function Footer() {
         }
 
         .copyright a {
-          color: #d33682;
+          color: #0082c8;
           text-decoration: none;
           transition: color 0.3s ease;
         }
@@ -396,7 +396,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="brand-logo">
-                <div className="brand-icon">DH</div>
+                <div className="brand-icon">ТУ</div>
                 <span className="brand-name">{data.company.name}</span>
               </div>
               <p className="brand-description">{data.company.description}</p>

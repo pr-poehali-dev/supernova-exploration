@@ -6,7 +6,7 @@ const PhotographyBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
-  const texts = ["БИЗНЕС.", "БРЕНДЫ."]
+  const texts = ["ДИСТРИБЬЮЦИЯ.", "ПАРТНЁРСТВО.", "РОСТ."]
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 40 : 100
@@ -54,7 +54,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .photography-banner *::selection {
-          background-color: rgba(241, 231, 40, 0.2);
+          background-color: rgba(0, 130, 200, 0.2);
           color: #ffffff;
         }
 
@@ -75,7 +75,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.4;
-          background: #d33682;
+          background: #0082c8;
           filter: blur(162px);
           height: 35%;
           width: 55%;
@@ -96,16 +96,16 @@ const PhotographyBanner: React.FC = () => {
           color: #fff;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(48px, 12vw, 160px);
-          line-height: 0.75;
+          font-size: clamp(36px, 9vw, 120px);
+          line-height: 0.85;
           font-style: normal;
           text-transform: uppercase;
         }
 
         .left-part h1 .text {
-          color: #d33682;
+          color: #0082c8;
           display: block;
-          height: clamp(100px, 15vw, 120px);
+          height: clamp(80px, 12vw, 110px);
         }
 
         .left-part h1 .d-flex {
@@ -148,7 +148,7 @@ const PhotographyBanner: React.FC = () => {
           margin: 40px 0 0;
           padding: 0;
           border: 0;
-          font-size: 56px;
+          font-size: 42px;
           line-height: 1;
           color: #f1f1f1;
           letter-spacing: 0.25px;
@@ -201,7 +201,7 @@ const PhotographyBanner: React.FC = () => {
         .book-link .arrow::after {
           position: absolute;
           content: "";
-          background-color: #d33682;
+          background-color: #0082c8;
           transition: all ease-in-out 0.35s;
           transform-origin: 0 0;
           border-radius: 30px;
@@ -230,7 +230,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span {
-          background-color: #d33682;
+          background-color: #0082c8;
           height: 2px;
           width: 100%;
           display: inline-block;
@@ -245,7 +245,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span::before {
-          background-color: #d33682;
+          background-color: #0082c8;
           content: "";
           height: 100%;
           width: 15px;
@@ -270,7 +270,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.4;
-          background: #d33682;
+          background: #0082c8;
           filter: blur(112px);
           height: 35%;
           width: 55%;
@@ -293,14 +293,14 @@ const PhotographyBanner: React.FC = () => {
 
         .particle {
           position: absolute;
-          background: rgba(211, 54, 130, 0.6);
+          background: rgba(0, 130, 200, 0.6);
           border-radius: 50%;
           pointer-events: none;
           animation: float linear infinite;
         }
 
         .particle:nth-child(odd) {
-          background: rgba(203, 75, 22, 0.4);
+          background: rgba(0, 80, 160, 0.4);
         }
 
         .particle:nth-child(3n) {
@@ -490,357 +490,302 @@ const PhotographyBanner: React.FC = () => {
           }
         }
 
-        .features-section {
+        /* ── ТАБЛИЦА ─────────────────────────────────────── */
+        .table-section {
           padding: 100px 30px;
           background-color: #073642;
           position: relative;
           overflow: hidden;
         }
 
-        .features-section::before {
+        .table-section::before {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #0082c8;
           filter: blur(140px);
           height: 40%;
           width: 40%;
           position: absolute;
           top: 20%;
           right: -20%;
-          z-index: -1;
+          z-index: 0;
         }
 
-        .features-container {
-          max-width: 1400px;
+        .table-container {
+          max-width: 1200px;
           margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-          gap: 60px;
-          align-items: center;
+          position: relative;
+          z-index: 1;
         }
 
-        .features-content h2 {
+        .section-title {
           color: #fff;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(60px, 8vw, 120px);
-          line-height: 0.9;
-          margin: 0 0 30px;
+          font-size: clamp(32px, 5vw, 64px);
+          line-height: 1;
+          margin: 0 0 60px;
           text-transform: uppercase;
         }
 
-        .features-content h2 .highlight {
-          color: #d33682;
+        .section-title .highlight {
+          color: #0082c8;
         }
 
-        .features-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
+        .dist-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-family: "Montserrat", sans-serif;
         }
 
-        .feature-item {
-          padding: 25px 0;
-          border-bottom: 1px solid #333;
-          display: flex;
-          align-items: center;
-          gap: 20px;
+        .dist-table thead tr {
+          background: #0082c8;
         }
 
-        .feature-icon {
-          width: 50px;
-          height: 50px;
-          background: #d33682;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 20px;
-          font-weight: bold;
-          color: #002b36;
-          flex-shrink: 0;
-        }
-
-        .feature-text h3 {
+        .dist-table thead th {
           color: #fff;
-          font-family: "Montserrat";
-          font-size: 18px;
-          margin: 0 0 8px;
-          text-transform: uppercase;
-        }
-
-        .feature-text p {
-          color: #aaa;
-          font-family: "Inter", sans-serif;
+          font-weight: 700;
           font-size: 14px;
-          margin: 0;
-          line-height: 1.6;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding: 18px 24px;
+          text-align: left;
+          border: none;
         }
 
-        .testimonials-section {
+        .dist-table tbody tr {
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          transition: background 0.2s;
+        }
+
+        .dist-table tbody tr:hover {
+          background: rgba(0, 130, 200, 0.08);
+        }
+
+        .dist-table tbody td {
+          color: #ccc;
+          font-size: 14px;
+          padding: 16px 24px;
+          vertical-align: middle;
+          line-height: 1.5;
+        }
+
+        .dist-table tbody td:first-child {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .badge-yes {
+          display: inline-block;
+          background: rgba(0, 200, 100, 0.15);
+          color: #00c864;
+          border: 1px solid rgba(0, 200, 100, 0.3);
+          border-radius: 20px;
+          padding: 4px 14px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .badge-no {
+          display: inline-block;
+          background: rgba(200, 50, 50, 0.15);
+          color: #ff5555;
+          border: 1px solid rgba(200, 50, 50, 0.3);
+          border-radius: 20px;
+          padding: 4px 14px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .badge-blue {
+          display: inline-block;
+          background: rgba(0, 130, 200, 0.15);
+          color: #0082c8;
+          border: 1px solid rgba(0, 130, 200, 0.3);
+          border-radius: 20px;
+          padding: 4px 14px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        @media screen and (max-width: 767px) {
+          .table-section {
+            padding: 60px 16px;
+          }
+          .dist-table thead th,
+          .dist-table tbody td {
+            padding: 12px 12px;
+            font-size: 12px;
+          }
+        }
+
+        /* ── УСЛОВИЯ ДОСТАВКИ ───────────────────────────── */
+        .delivery-section {
           padding: 100px 30px;
           background-color: #002b36;
           position: relative;
           overflow: hidden;
         }
 
-        .testimonials-section::before {
+        .delivery-section::before {
           content: "";
           border-radius: 197.5px 0px;
-          opacity: 0.4;
-          background: #d33682;
-          filter: blur(120px);
+          opacity: 0.35;
+          background: #0082c8;
+          filter: blur(140px);
           height: 50%;
-          width: 30%;
+          width: 35%;
           position: absolute;
-          top: 50%;
+          top: 10%;
           left: -15%;
-          transform: translateY(-50%);
-          z-index: -1;
+          z-index: 0;
         }
 
-        .testimonials-container {
+        .delivery-container {
           max-width: 1200px;
           margin: 0 auto;
-          text-align: center;
+          position: relative;
+          z-index: 1;
         }
 
-        .testimonials-title {
-          color: #fff;
+        .delivery-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          margin-top: 60px;
+        }
+
+        .delivery-block {
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 16px;
+          padding: 32px;
+        }
+
+        .delivery-block h3 {
+          color: #0082c8;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(60px, 8vw, 100px);
-          line-height: 0.9;
-          margin: 0 0 80px;
+          font-size: 16px;
           text-transform: uppercase;
-        }
-
-        .testimonials-marquee {
+          letter-spacing: 1px;
+          margin: 0 0 20px;
           display: flex;
-          animation: scroll 30s linear infinite;
-          gap: 40px;
-          width: max-content;
+          align-items: center;
+          gap: 10px;
         }
 
-        .testimonials-marquee:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .testimonial-card {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid #333;
-          border-radius: 20px;
-          padding: 40px 30px;
-          position: relative;
-          backdrop-filter: blur(10px);
-          width: 400px;
+        .delivery-block h3 .block-num {
+          width: 28px;
+          height: 28px;
+          background: #0082c8;
+          color: #002b36;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 13px;
+          font-weight: 700;
           flex-shrink: 0;
         }
 
-        .testimonial-quote {
-          color: #fff;
-          font-family: "Inter", sans-serif;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 1.8;
-          margin: 0 0 30px;
-          font-style: italic;
-        }
-
-        .testimonial-author {
-          display: flex;
-          font-family: "Inter", sans-serif;
-          align-items: center;
-          gap: 15px;
-        }
-
-        .author-avatar {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: #d33682;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-weight: bold;
-          color: #002b36;
-        }
-
-        .author-info h4 {
-          color: #cb4b16;
-          font-family: "Inter", sans-serif;
-          font-size: 14px;
+        .delivery-block ul {
+          list-style: none;
+          padding: 0;
           margin: 0;
-          text-transform: uppercase;
         }
 
-        .author-info p {
+        .delivery-block ul li {
           color: #aaa;
-          font-family: "Inter", sans-serif;
-          font-size: 12px;
-          margin: 5px 0 0;
-        }
-
-        .cta-section {
-          padding: 120px 30px;
-          background-color: #073642;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .cta-section::before {
-          content: "";
-          border-radius: 197.5px 0px;
-          opacity: 0.6;
-          background: #d33682;
-          filter: blur(180px);
-          height: 60%;
-          width: 80%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          z-index: -1;
-        }
-
-        .cta-container {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        .cta-title {
-          color: #fff;
           font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          line-height: 1.7;
+          padding: 8px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.05);
+          padding-left: 16px;
+          position: relative;
+        }
+
+        .delivery-block ul li::before {
+          content: "—";
+          position: absolute;
+          left: 0;
+          color: #0082c8;
           font-weight: 700;
-          font-size: clamp(80px, 12vw, 160px);
-          line-height: 0.8;
-          margin: 0 0 30px;
-          text-transform: uppercase;
         }
 
-        .cta-subtitle {
-          color: #d33682;
-          font-family: "Montserrat";
-          font-size: 26px;
-          line-height: 1.6;
-          margin: 0 0 50px;
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
+        .delivery-block ul li:last-child {
+          border-bottom: none;
         }
 
-        .cta-buttons {
-          display: flex;
-          gap: 30px;
-          justify-content: center;
-          flex-wrap: wrap;
+        .delivery-block.full-width {
+          grid-column: 1 / -1;
         }
 
-        .cta-button {
-          padding: 18px 40px;
-          background: #d33682;
-          color: #002b36;
-          text-decoration: none;
-          font-family: "Montserrat";
-          font-size: 16px;
-          font-weight: bold;
-          text-transform: uppercase;
-          border-radius: 50px;
-          transition: all 0.3s ease;
-          border: 2px solid #d33682;
+        .delivery-block.warning {
+          border-color: rgba(255, 85, 85, 0.25);
+          background: rgba(255, 85, 85, 0.04);
         }
 
-        .cta-button:hover {
-          background: transparent;
-          color: #d33682;
+        .delivery-block.warning h3 {
+          color: #ff5555;
         }
 
-        .cta-button.secondary {
-          background: transparent;
-          color: #fff;
-          border: 2px solid #fff;
+        .delivery-block.warning h3 .block-num {
+          background: #ff5555;
         }
 
-        .cta-button.secondary:hover {
-          background: transparent;
-          color: #d33682;
-          border: 2px solid #d33682;
+        .delivery-block.warning ul li::before {
+          color: #ff5555;
         }
 
-        @media screen and (max-width: 1199px) {
-          .features-section,
-          .testimonials-section,
-          .cta-section {
-            padding: 80px 20px;
-          }
-          .features-container {
-            gap: 40px;
-          }
-          .testimonials-marquee {
-            gap: 30px;
-          }
-          .cta-buttons {
-            gap: 20px;
-          }
+        .timing-highlight {
+          color: #0082c8;
+          font-weight: 700;
         }
 
         @media screen and (max-width: 767px) {
-          .features-section,
-          .testimonials-section,
-          .cta-section {
+          .delivery-section {
             padding: 60px 16px;
           }
-          .features-container {
+          .delivery-grid {
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 20px;
           }
-          .testimonials-marquee {
-            gap: 25px;
-          }
-          .testimonial-card {
-            padding: 30px 20px;
-          }
-          .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-          }
-          .cta-button {
-            width: 100%;
-            max-width: 300px;
+          .delivery-block {
+            padding: 24px 20px;
           }
         }
       `}</style>
 
       <div className="photography-banner">
         <main>
+          {/* ── СЛАЙД 1: HERO ── */}
           <section className="info-section">
             <div className="left-part">
               <h1>
                 <span className="d-flex">
-                  {["С", "О", "З", "Д", "А", "Ё", "М"].map((char, index) => (
+                  {["Т", "Е", "Х", "Н", "О"].map((char, index) => (
                     <span key={index} className="char tracking-tighter" style={{ animationDelay: `${index * 0.08}s` }}>
-                      {char === " " ? "\u00A0" : char}
+                      {char}
+                    </span>
+                  ))}
+                </span>
+                <span className="d-flex">
+                  {["У", "С", "П", "Е", "Х"].map((char, index) => (
+                    <span key={index} className="char tracking-tighter" style={{ animationDelay: `${(index + 5) * 0.08}s` }}>
+                      {char}
                     </span>
                   ))}
                 </span>
                 <span className="text tracking-tighter">{currentText}</span>
               </h1>
               <p className="tracking-widest">
-                Помогаем предпринимателям запускать цифровые продукты быстрее с помощью современных технологий
+                Лидер дистрибьюции в России — надёжные поставки, широкий ассортимент и партнёрство, которому доверяют.
               </p>
-              <a href="#cta" className="book-link">
-                <span className="linktext tracking-tighter text-3xl">Начать проект</span>
+              <a href="#delivery" className="book-link">
+                <span className="linktext tracking-tighter text-3xl">Условия работы</span>
                 <span className="arrow">
                   <span></span>
                 </span>
@@ -867,163 +812,168 @@ const PhotographyBanner: React.FC = () => {
                 <img
                   src="https://www.yudiz.com/codepen/photography-banner/wave.svg"
                   alt="Line"
-                  style={{ filter: "hue-rotate(280deg) saturate(1.5)" }}
+                  style={{ filter: "hue-rotate(180deg) saturate(2)" }}
                 />
                 <img
                   src="https://www.yudiz.com/codepen/photography-banner/wave.svg"
                   alt="Line"
-                  style={{ filter: "hue-rotate(280deg) saturate(1.5)" }}
+                  style={{ filter: "hue-rotate(180deg) saturate(2)" }}
                 />
               </div>
               <div className="bg-dash-circle">
                 <img
                   src="https://www.yudiz.com/codepen/photography-banner/dash-circle.svg"
                   alt="dash-circle"
-                  style={{ filter: "hue-rotate(280deg) saturate(1.5)" }}
+                  style={{ filter: "hue-rotate(180deg) saturate(2)" }}
                 />
               </div>
             </div>
           </section>
 
-          <section className="features-section">
-            <div className="features-container">
-              <div className="features-content">
-                <h2>Почему выбирают нас?</h2>
-              </div>
-              <ul className="features-list">
-                <li className="feature-item">
-                  <div className="feature-icon">01</div>
-                  <div className="feature-text">
-                    <h3>Опытная команда</h3>
-                    <p className="font-light tracking-wider">
-                      Более 10 лет опыта в разработке цифровых продуктов для бизнеса любого масштаба
-                    </p>
-                  </div>
-                </li>
-                <li className="feature-item">
-                  <div className="feature-icon">02</div>
-                  <div className="feature-text">
-                    <h3>Современные технологии</h3>
-                    <p className="tracking-wider">
-                      Используем передовые инструменты и фреймворки для создания быстрых и надёжных решений
-                    </p>
-                  </div>
-                </li>
-                <li className="feature-item">
-                  <div className="feature-icon">03</div>
-                  <div className="feature-text">
-                    <h3>Индивидуальный подход</h3>
-                    <p className="tracking-wider">
-                      Каждый проект уникален — мы адаптируем решения под ваши конкретные задачи и цели
-                    </p>
-                  </div>
-                </li>
-                <li className="feature-item">
-                  <div className="feature-icon">04</div>
-                  <div className="feature-text">
-                    <h3>Поддержка 24/7</h3>
-                    <p className="tracking-wider">
-                      Обеспечиваем техническую поддержку и сопровождение на всех этапах работы
-                    </p>
-                  </div>
-                </li>
-              </ul>
+          {/* ── СЛАЙД 2: ТАБЛИЦА ── */}
+          <section className="table-section">
+            <div className="table-container">
+              <h2 className="section-title">
+                Условия <span className="highlight">дистрибьюции</span>
+              </h2>
+              <table className="dist-table">
+                <thead>
+                  <tr>
+                    <th>Параметр</th>
+                    <th>Условие</th>
+                    <th>Сроки / Детали</th>
+                    <th>Примечание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Согласование заказа</td>
+                    <td>Предварительно с менеджером</td>
+                    <td>Ассортимент, сумма, способ оплаты, адрес и дата</td>
+                    <td><span className="badge-blue">Обязательно</span></td>
+                  </tr>
+                  <tr>
+                    <td>Комплектация и отправка</td>
+                    <td>Только оплаченные заказы</td>
+                    <td>После поступления оплаты</td>
+                    <td><span className="badge-blue">Предоплата</span></td>
+                  </tr>
+                  <tr>
+                    <td>Обработка заказа</td>
+                    <td>При поступлении с 9:00 до 15:00 МСК</td>
+                    <td>В течение 2 часов</td>
+                    <td><span className="badge-yes">Быстро</span></td>
+                  </tr>
+                  <tr>
+                    <td>Уведомление о доставке</td>
+                    <td>Экспедитор звонит в день доставки</td>
+                    <td>За 40 минут до прибытия</td>
+                    <td><span className="badge-yes">Включено</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ожидание при разгрузке</td>
+                    <td>Максимальное время ожидания</td>
+                    <td>15 минут</td>
+                    <td><span className="badge-blue">Стандарт</span></td>
+                  </tr>
+                  <tr>
+                    <td>Ограниченный въезд</td>
+                    <td>Заказчик обеспечивает пропуск</td>
+                    <td>Иначе — доставка до зоны ограничения</td>
+                    <td><span className="badge-no">Условие</span></td>
+                  </tr>
+                  <tr>
+                    <td>Доставка «до двери»</td>
+                    <td>При отсутствии ограничений ПДД</td>
+                    <td>Подъезд по адресу доставки</td>
+                    <td><span className="badge-yes">Возможно</span></td>
+                  </tr>
+                  <tr>
+                    <td>Стройплощадки, вокзалы, СНТ</td>
+                    <td>Доставка не осуществляется</td>
+                    <td>—</td>
+                    <td><span className="badge-no">Недоступно</span></td>
+                  </tr>
+                  <tr>
+                    <td>Дороги без твёрдого покрытия</td>
+                    <td>Доставка не осуществляется</td>
+                    <td>—</td>
+                    <td><span className="badge-no">Недоступно</span></td>
+                  </tr>
+                  <tr>
+                    <td>Связь с клиентом</td>
+                    <td>Обязательна для доставки</td>
+                    <td>При недозвоне — доставка не осуществляется</td>
+                    <td><span className="badge-no">Обязательно</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </section>
 
-          <section className="testimonials-section">
-            <div className="testimonials-container">
-              <h2 className="testimonials-title">Отзывы клиентов</h2>
-              <div className="testimonials-marquee">
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "Команда полностью изменила наш подход к цифровому присутствию. Результаты превзошли все ожидания."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">АС</div>
-                    <div className="author-info">
-                      <h4>Алексей Смирнов</h4>
-                      <p>Директор по развитию</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "Профессиональный подход и внимание к деталям. Запустили проект в рекордные сроки без потери качества."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">МК</div>
-                    <div className="author-info">
-                      <h4>Мария Козлова</h4>
-                      <p>Основатель стартапа</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "От идеи до запуска — всё прошло гладко. Рекомендую всем, кто ценит качество и скорость."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">ДВ</div>
-                    <div className="author-info">
-                      <h4>Дмитрий Волков</h4>
-                      <p>Предприниматель</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "Команда полностью изменила наш подход к цифровому присутствию. Результаты превзошли все ожидания."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">АС</div>
-                    <div className="author-info">
-                      <h4>Алексей Смирнов</h4>
-                      <p>Директор по развитию</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "Профессиональный подход и внимание к деталям. Запустили проект в рекордные сроки без потери качества."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">МК</div>
-                    <div className="author-info">
-                      <h4>Мария Козлова</h4>
-                      <p>Основатель стартапа</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="testimonial-card">
-                  <p className="testimonial-quote">
-                    "От идеи до запуска — всё прошло гладко. Рекомендую всем, кто ценит качество и скорость."
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">ДВ</div>
-                    <div className="author-info">
-                      <h4>Дмитрий Волков</h4>
-                      <p>Предприниматель</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          {/* ── СЛАЙД 3: УСЛОВИЯ ДОСТАВКИ ── */}
+          <section className="delivery-section" id="delivery">
+            <div className="delivery-container">
+              <h2 className="section-title">
+                Общие условия <span className="highlight">доставки</span>
+              </h2>
 
-          <section className="cta-section" id="cta">
-            <div className="cta-container">
-              <h2 className="cta-title text-center">Готовы начать?</h2>
-              <p className="cta-subtitle">
-                Присоединяйтесь к сотням компаний, которые уже трансформировали свой бизнес. Ваш путь к успеху начинается здесь.
-              </p>
-              <div className="cta-buttons">
-                <a href="#" className="cta-button">
-                  Обсудить проект
-                </a>
-                <a href="#" className="cta-button secondary">
-                  Посмотреть кейсы
-                </a>
+              <div className="delivery-grid">
+                <div className="delivery-block">
+                  <h3>
+                    <span className="block-num">1</span>
+                    Согласование заказа
+                  </h3>
+                  <ul>
+                    <li>Ассортимент заказанного товара</li>
+                    <li>Сумма заказа</li>
+                    <li>Способ оплаты</li>
+                    <li>Адрес доставки</li>
+                    <li>Дата доставки</li>
+                  </ul>
+                </div>
+
+                <div className="delivery-block">
+                  <h3>
+                    <span className="block-num">2</span>
+                    Сроки обработки
+                  </h3>
+                  <ul>
+                    <li>На комплектацию выдаются только <span className="timing-highlight">оплаченные заказы</span></li>
+                    <li>При поступлении с <span className="timing-highlight">9:00 до 15:00 МСК</span> — обработка в течение <span className="timing-highlight">2 часов</span></li>
+                    <li>Счёт на оплату выставляется в те же сроки</li>
+                  </ul>
+                </div>
+
+                <div className="delivery-block">
+                  <h3>
+                    <span className="block-num">3</span>
+                    Процесс доставки
+                  </h3>
+                  <ul>
+                    <li>Экспедитор звонит по контактному номеру в день доставки <span className="timing-highlight">за 40 минут</span> до прибытия</li>
+                    <li>При невозможности принять груз — заранее уведомить менеджера</li>
+                    <li>Максимальное ожидание экспедитором — <span className="timing-highlight">15 минут</span></li>
+                    <li>При ограничениях въезда — заказчик обеспечивает пропуск</li>
+                    <li>Без пропуска — доставка до зоны ограниченного въезда</li>
+                    <li>Доставка «до двери» — при отсутствии ограничений ПДД</li>
+                  </ul>
+                </div>
+
+                <div className="delivery-block warning">
+                  <h3>
+                    <span className="block-num">!</span>
+                    Доставка не осуществляется
+                  </h3>
+                  <ul>
+                    <li>На стройплощадки, вокзалы, садово-огородные товарищества, цеха, пункты общественного питания (кроме административных помещений)</li>
+                    <li>На режимные, секретные и несуществующие объекты</li>
+                    <li>В парки, леса, на пляжи и места без определённого адреса</li>
+                    <li>Если проезд к месту передачи товара невозможен ближе чем на <span style={{color: '#ff5555', fontWeight: 700}}>100 метров</span></li>
+                    <li>По дорогам с нетвёрдым покрытием</li>
+                    <li>Если с клиентом не удалось связаться</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
